@@ -82,9 +82,7 @@ var Engine = (function(global) {
 
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
     }
-
 
     /* This is called by the update function  and loops through all of the
      * objects within your allEnemies array as defined in app.js and calls
@@ -95,12 +93,21 @@ var Engine = (function(global) {
      */
 
     function updateEntities(dt) {
+        // this code refers to this line from app.js:
+        // var allEnemies = [new Enemy(), new Enemy(), new Enemy(), new Enemy()];
         allEnemies.forEach(function(enemy) {
+            // enemy is the name we randomly chose to refer to each enemy
+            // object instance in this function scope
             enemy.update(dt);
+            // enemy doesn't have an update method, but it finds it through
+            // prototype delegation to Enemy.prototype
         });
-        player.update();
+        // 'this' refers to the object instance thanks to prototype delegation
+        // EVEN THOUGH the function is actually stored at Player.prototype
+       player.update();
+        // player doesn't have an update method either, but it finds it through
+        // prototype delegation to Player.prototype as well
     }
-
 
     /* This function initially draws the "game level", it will then call
      * the renderEntities function. Remember, this function is called every
@@ -153,11 +160,20 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
+        // this code refers this line from app.js:
+        // var allEnemies = [new Enemy(), new Enemy(), new Enemy(), new Enemy()];
         allEnemies.forEach(function(enemy) {
+            // enemy is the name we randomly chose to refer to each enemy object
+            // instance in this function scope
             enemy.render();
+            // enemy doesn't have a render method, but it finds it through
+            // prototype delegation to Enemy.prototype
         });
-
+        // we can access the render function as a result of prototype delegation to
+        // the object at Player.prototype;  once we access the function, we can call it.
         player.render();
+        // player doesn't have a render method either, but it too finds it through
+        // prototype delegation to Player.prototype
     }
 
     /* This function does nothing but it could have been a good place to
