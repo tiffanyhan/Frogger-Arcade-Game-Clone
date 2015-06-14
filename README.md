@@ -1,6 +1,12 @@
-frontend-nanodegree-arcade-game
+Frogger Game Clone
 ===============================
 
-Students should use this rubric: https://www.udacity.com/course/viewer#!/c-ud015/l-3072058665/m-3072588797
+goal of the game:
+	- try to get to the water before bugs get to you!
 
-for self-checking their submission.
+how to play the game:
+	- open index.html to load the game
+	- use the arrows keys to move your character
+	- getting hit by a bug means you have to start over
+	- when you get to the water you've won, and your character
+	  resets back to the starting position

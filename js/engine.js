@@ -160,20 +160,11 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        // this code refers this line from app.js:
-        // var allEnemies = [new Enemy(), new Enemy(), new Enemy(), new Enemy()];
         allEnemies.forEach(function(enemy) {
-            // enemy is the name we randomly chose to refer to each enemy object
-            // instance in this function scope
             enemy.render();
-            // enemy doesn't have a render method, but it finds it through
-            // prototype delegation to Enemy.prototype
         });
-        // we can access the render function as a result of prototype delegation to
-        // the object at Player.prototype;  once we access the function, we can call it.
+
         player.render();
-        // player doesn't have a render method either, but it too finds it through
-        // prototype delegation to Player.prototype
     }
 
     /* This function does nothing but it could have been a good place to
