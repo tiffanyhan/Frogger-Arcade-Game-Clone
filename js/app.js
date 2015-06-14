@@ -183,7 +183,7 @@ Player.prototype.start = function() {
     this.x = 202.5;
     this.y = 405;
     return this;
-}
+};
 
 // these functions appear to be available as properties of the enemy
 // object instances even though the enemy object instances are really
