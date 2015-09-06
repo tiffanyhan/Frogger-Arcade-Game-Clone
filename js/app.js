@@ -85,16 +85,21 @@ Player.prototype.start = function() {
 // define what the keys make the character do
 Player.prototype.handleInput = function() {
     // make the player move one block at a time on the gameboard
-    if (event.keyCode == 37 && this.x > 2.5) {
+    console.log(event);
+    if ((event.keyCode === 37 || event.srcElement.className === 'left')
+        && (this.x > 2.5)) {
         this.x = this.x - 100;
     }
-    if (event.keyCode == 38 && this.y > -10) {
+    if ((event.keyCode === 38 || event.srcElement.className === 'up')
+        && (this.y > -10)) {
         this.y = this.y - 83;
     }
-    if (event.keyCode == 39 && this.x < 402.5) {
+    if ((event.keyCode === 39 || event.srcElement.className === 'right')
+        && (this.x < 402.5)) {
         this.x = this.x + 100;
     }
-    if (event.keyCode == 40 && this.y < 405) {
+    if ((event.keyCode === 40 || event.srcElement.className === 'down')
+        && (this.y < 405)) {
         this.y = this.y + 83;
     }
 };
@@ -138,4 +143,4 @@ var startButton = document.getElementById('start-button');
 startButton.addEventListener('click', function() {
     var startScreen = document.getElementById('start-screen');
     startScreen.style.display='none';
-})
+});

@@ -20,7 +20,7 @@
     		</div>
 
     		<div class="start">
-	    		<button id="start-button">start</button>
+	    		<a href="#" id="start-button">start</a>
 	    	</div>
 
     		<div class="note">
@@ -33,5 +33,18 @@
     <script src="js/resources.js"></script>
     <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
+
+    <div class="controls">
+        <div class="controls-row">
+            <span onclick="player.handleInput(event)" class="up">&#9650;</span>
+        </div>
+        <div class="controls-row">
+            <span onclick="player.handleInput(event)" class="left">&#9664;</span>
+            <span onclick="player.handleInput(event)" class="right">&#9658;</span>
+        </div>
+        <div class="controls-row">
+            <span onclick="player.handleInput(event)" class="down">&#9660;</span>
+        </div>
+    </div>
 </body>
 </html>
