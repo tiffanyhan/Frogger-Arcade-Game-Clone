@@ -132,3 +132,10 @@ document.addEventListener('keyup', function(e) {
     // pass values to Player.prototype.handle()
     player.handleInput(allowedKeys[e.keyCode]);
 });
+
+var startButton = document.getElementById('start-button');
+
+startButton.addEventListener('click', function() {
+    var startScreen = document.getElementById('start-screen');
+    startScreen.style.display='none';
+})
