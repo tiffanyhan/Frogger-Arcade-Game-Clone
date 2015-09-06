@@ -6,45 +6,40 @@
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-    <div id="start-screen">
-    	<div class="container">
-	    	<div class="heading">
-		    	<h1 class="name">Frogger</h1>
-		    	<p class="sub-title">the game</p>
-	    	</div>
+    <body>
+        <div id="start-screen">
+        	<div class="container">
+    	    	<div class="heading">
+    		    	<h1 class="name">Frogger</h1>
+    		    	<p class="sub-title">the game</p>
+                    <p class="instructions">
+                        Can you get to the water before the enemy bugs get to you?
+                        Use the arrow keys on your keyboard to move your character,
+                        or use the provided arrows on screen.
+                    </p>
+    	    	</div>
 
-	    	<div class="instructions">
-    			Can you get to the water before the enemy bugs get to you?
-    			Use the arrow keys to move your character.
-    		</div>
-
-    		<div class="start">
-	    		<a href="#" id="start-button">start</a>
-	    	</div>
-
-    		<div class="note">
-    			Note: this game has not yet been optimized for touch screen devices.
-    			If you're on one, please come back on a device with a keyboard.
-    		</div>
-    	</div>
-    </div>
-
-    <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/engine.js"></script>
-
-    <div class="controls">
-        <div class="controls-row">
-            <span onclick="player.handleInput(event)" class="up">&#9650;</span>
+        		<div class="start">
+    	    		<a href="#" id="start-button">start</a>
+    	    	</div>
+        	</div>
         </div>
-        <div class="controls-row">
-            <span onclick="player.handleInput(event)" class="left">&#9668;</span>
-            <span onclick="player.handleInput(event)" class="right">&#9658;</span>
+
+        <script src="js/resources.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/engine.js"></script>
+
+        <div class="controls">
+            <div class="controls-row">
+                <span onclick="player.handleInput(event)" class="up">&#9650;</span>
+            </div>
+            <div class="controls-row">
+                <span onclick="player.handleInput(event)" class="left">&#9668;</span>
+                <span onclick="player.handleInput(event)" class="right">&#9658;</span>
+            </div>
+            <div class="controls-row">
+                <span onclick="player.handleInput(event)" class="down">&#9660;</span>
+            </div>
         </div>
-        <div class="controls-row">
-            <span onclick="player.handleInput(event)" class="down">&#9660;</span>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
