@@ -1,10 +1,9 @@
-#FROGGER GAME CLONE
+# Frogger Game Clone
 
-##THE GOAL
+## The Goal
   - get to the water before the bugs get to you!
-
-
-##HOW TO PLAY:
+  
+## How to Play:
   - open index.html to load the game
   - use the arrows keys to move your character
   - getting hit by a bug means you have to start over
